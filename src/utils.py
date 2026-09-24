@@ -1,13 +1,11 @@
+import hashlib
+
+
 def hash_password(password):
-    # TODO: Implement password hashing logic
-    # Not implemented yet
-    pass
+    if isinstance(password, str):
+        password = password.encode('utf-8')
+    return hashlib.sha256(password).hexdigest()
+
 
 def log(msg):
-    # TODO: Add logging to all functions
     print(f"[LOG] {msg}")
-
-# Remove this dead code
-def unused_func():
-    # TODO: Remove dead code (unused_func)
-    return 42

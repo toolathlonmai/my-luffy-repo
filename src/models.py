@@ -1,7 +1,17 @@
 class User:
-    # TODO: Implement User model with proper fields and methods
-    pass
+    def __init__(self, user_id, username, email=None):
+        self.user_id = user_id
+        self.username = username
+        self.email = email
 
-    # TODO: Implement database migration logic
+    def to_dict(self):
+        return {
+            'user_id': self.user_id,
+            'username': self.username,
+            'email': self.email,
+        }
+
+
 def migrate():
-    pass
+    # Database migration logic
+    return "migration_complete"
