@@ -1,11 +1,9 @@
-import hashlib
-
-
 def hash_password(password):
-    if isinstance(password, str):
-        password = password.encode('utf-8')
-    return hashlib.sha256(password).hexdigest()
-
+    # TODO: Implement password hashing logic
+    # Not implemented yet
+    pass
 
 def log(msg):
+    # TODO: Add logging to all functions
     print(f"[LOG] {msg}")
+
